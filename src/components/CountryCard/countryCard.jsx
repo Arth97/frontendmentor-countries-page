@@ -1,14 +1,18 @@
 import React, { useEffect } from 'react';
 import './countryCard.css';
+import { useNavigate } from 'react-router'
 
 const CountryCard = ({country}) => {
 
+  const navigate = useNavigate()
+
   useEffect(() => {
-    console.log("country", country)
+    console.log("country.cca3", country.cca3)
   },[])
 
+
   return (
-    <div className="country-card">
+    <div className="country-card" onClick={() => navigate(`/countryDetail/${country.cca3}`)}>
       <div className="flag">
         <img src={country?.flags?.svg} alt="Flag" className="flag-img" />
       </div>

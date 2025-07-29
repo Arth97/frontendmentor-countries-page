@@ -7,6 +7,12 @@
   overflow: hidden;
   display: flex;
   flex-direction: column;
+  cursor: pointer;
+}
+
+.country-card:hover {
+  transform: scale(1.04);
+  transition: transform 0.1s ease-in;
 }
 
 .flag {

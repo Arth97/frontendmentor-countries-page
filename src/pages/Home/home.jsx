@@ -1,11 +1,15 @@
-import CountryCard from '../../components/CountryCard/countryCard';
 import './home.css';
+import CountryCard from '../../components/CountryCard/countryCard';
 import { useEffect, useState } from 'react';
+import debounce from 'debounce';
 
-const API_URL = "https://restcountries.com/v3.1/all?fields=name,capital,idd,flags,region,continents,currencies,borders,languages,population";
+const API_URL = "https://restcountries.com/v3.1/all?fields=name,cca3,capital,idd,flags,region,continents,currencies,languages,population";
 
 function Home() {
 	const [countriesData, setCountriesData] = useState([]);
+	const [filteredCountries, setFilteredCountries] = useState([]);
+	const [selectedRegion, setSelectedRegion] = useState("");
+	const [searchInput, setSearchInput] = useState("");
 
 	useEffect(() => {
 		fetchData();
@@ -17,19 +21,55 @@ function Home() {
 			const data = await response.json();
 			console.log("data", data);
 			setCountriesData(data);
+			setFilteredCountries(data);
 			return;
 		} catch (err) {
 			console.log("err", err);
 		}
 	}
 
+	const filterByRegion = (region) => {
+		if (!countriesData) return;
+		
+		let filteredData = [];
+		filteredData = countriesData.filter(country => {
+			return region === country.region.toLowerCase()
+		});
+		setFilteredCountries(filteredData);
+
+		if (searchInput!=="") searchByInput(searchInput, filteredData);
+	}
+
+	const searchByInput = (searchInput, filteredData=[]) => {
+		setSearchInput(searchInput)
+		const data = filteredData.length===0 ? countriesData : filteredData;
+
+		const lowerSearch = searchInput.toLowerCase();
+		const searchedData = data.filter(country => {
+			const name = country.name?.common?.toLowerCase() || '';
+			return name.includes(lowerSearch)
+		});
+		setFilteredCountries(searchedData);
+	}
+
+	const debouncedHandleSearch = debounce(searchByInput, 1200);
+
   return (
     <div className="home-container">
 			<div className="w-full flex flex-row justify-between items-center">
 				<search>
-					<input className="search-bar" id="searchCountry" type="text" placeholder="Search for a country..." />
+					<input className="search-bar" onChange={(e) => debouncedHandleSearch(e.target.value)} id="searchCountry" type="text" placeholder="Search for a country..." />
 				</search>
-				<select id="regionFilter" className="region-filter">
+
+				<select
+					id="regionFilter"
+					className="region-filter"
+					value={selectedRegion}
+					onChange={(e) => {
+						setSelectedRegion(e.target.value);
+						filterByRegion(e.target.value);
+					}}
+				>
 					<option value="">Filter by Region</option>
 					<option value="africa">Africa</option>
 					<option value="americas">Americas</option>
@@ -40,7 +80,7 @@ function Home() {
 			</div>
 
 			<div className="countries-grid">
-				{countriesData && countriesData.map((country, index) => (
+				{filteredCountries && filteredCountries.map((country, index) => (
 					<CountryCard country={country} key={index} />
 				))}
 			</div>
