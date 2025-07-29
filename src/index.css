@@ -68,17 +68,19 @@ body {
 }
 
 /* Input styles */
-input, select, textarea {
+input, select, p {
   background: var(--color-white);
   color: var(--color-grey-950);
-  border: 1px solid var(--color-grey-400);
   font-family: var(--font-family);
 }
 
-.dark-mode input, .dark-mode select, .dark-mode textarea {
+.dark-mode input, 
+.dark-mode select, 
+.dark-mode p,
+.dark-mode div, 
+.dark-mode h1 {
   background: var(--color-blue-900);
   color: var(--color-white);
-  border: 1px solid var(--color-blue-900);
 }
 
 /* Typography utility classes */

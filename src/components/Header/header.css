@@ -18,6 +18,16 @@
 	font-weight: var(--font-weight-bold);
 }
 
-.dark-mode-toggle {
-	
+.moon-icon {
+	width: 24px;
+	height: 24px;
+}
+
+.theme-selector {
+	display: flex;
+	flex-direction: row;
+	gap: 5px;
+	font-size: 18px;
+	font-weight: var(--font-weight-semibold);
+	cursor: pointer;
 }
