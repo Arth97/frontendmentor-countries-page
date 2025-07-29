@@ -4,6 +4,7 @@ import { useNavigate, useParams } from 'react-router';
 
 const CountryDetail = () => {
   const [country, setCountry] = useState(null);
+  const navigate = useNavigate();
 
   const {cca3} = useParams();
 
@@ -25,8 +26,13 @@ const CountryDetail = () => {
 
   return (
     <div className="country-detail">
-      <div className="back-button">
-        flecha Back
+      <div className="back-button" onClick={() => navigate('/')}>
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="back-arrow">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M10.5 19.5 3 12m0 0 7.5-7.5M3 12h18" />
+        </svg>
+        <p>          
+          Back
+        </p>
       </div>
       <div className="country-detail-content">
         <div className="country-detail-flag">

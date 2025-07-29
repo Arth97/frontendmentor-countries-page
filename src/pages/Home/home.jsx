@@ -56,8 +56,11 @@ function Home() {
 
   return (
     <div className="home-container">
-			<div className="w-full flex flex-row justify-between items-center">
-				<search>
+			<div className="w-full flex flex-col sm:flex-row justify-between sm:items-center gap-6">
+				<search className="search-container">
+					<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="search-icon">
+						<path strokeLinecap="round" strokeLinejoin="round" d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z" />
+					</svg>
 					<input className="search-bar" onChange={(e) => debouncedHandleSearch(e.target.value)} id="searchCountry" type="text" placeholder="Search for a country..." />
 				</search>
 
@@ -92,10 +95,12 @@ export default Home;
 
 /**
  * TODO: 
- * Crear componente tarjeta
- * Desde home pasar datos paisxpais a tarjeta,
- * Cargar datos en tarjeta,
- * Hacer grid con tarjetas
+ * Flecha button back
+ * Theme change button
+ * Theme change
+ * Responsive
+ * Icono Search bar
+ * Tocar un poco el filter diseño
  */
 
 /** 

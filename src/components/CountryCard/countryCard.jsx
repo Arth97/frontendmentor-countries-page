@@ -6,11 +6,6 @@ const CountryCard = ({country}) => {
 
   const navigate = useNavigate()
 
-  useEffect(() => {
-    console.log("country.cca3", country.cca3)
-  },[])
-
-
   return (
     <div className="country-card" onClick={() => navigate(`/countryDetail/${country.cca3}`)}>
       <div className="flag">
