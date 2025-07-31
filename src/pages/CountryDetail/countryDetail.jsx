@@ -55,7 +55,18 @@ const CountryDetail = () => {
             </div>
           </div>
           <div>
-            <p><span className="label">Border Countries:</span> {country?.capital}</p>
+            <p>
+              <span className="label">Border Countries:</span>
+              {country?.borders && country.borders.length > 0 ? (
+                country.borders.map((border, idx) => (
+                  <span key={border} style={{ marginRight: '8px' }} className={"border"}>
+                    {border}
+                  </span>
+                ))
+              ) : (
+                <span> No borders </span>
+              )}
+            </p>
           </div>
         </div>
       </div>

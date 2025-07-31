@@ -69,7 +69,7 @@ body {
 
 /* Input styles */
 input, select, p {
-  background: var(--color-white);
+  background: var(--color-grey-50);
   color: var(--color-grey-950);
   font-family: var(--font-family);
 }
