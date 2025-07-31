@@ -94,22 +94,5 @@ function Home() {
 export default Home;
 
 /**
- * TODO: 
- * Flecha button back
- * Theme change button
- * Theme change
- * Responsive
- * Icono Search bar
- * Tocar un poco el filter diseño
+ * TODO: Click through to the border countries on the detail page
  */
-
-/** 
-TODO:
-- See all countries from the API on the homepage
-- Search for a country using an `input` field
-- Filter countries by region
-- Click on a country to see more detailed information on a separate page
-- Click through to the border countries on the detail page
-- Toggle the color scheme between light and dark mode *(optional)*
-
-*/
