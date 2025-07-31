@@ -42,7 +42,7 @@ function Home() {
 
 	const searchByInput = (searchInput, filteredData=[]) => {
 		setSearchInput(searchInput)
-		const data = filteredData.length===0 ? countriesData : filteredData;
+		const data = filteredData.length===0 ? filteredCountries : filteredData;
 
 		const lowerSearch = searchInput.toLowerCase();
 		const searchedData = data.filter(country => {
