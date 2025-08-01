@@ -9,15 +9,15 @@ import { ThemeProvider } from "./ThemeContext";
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   // <React.StrictMode>
-		//<BrowserRouter basename="/devchallenge-country-quiz">
+		//<BrowserRouter basename="/frontendmentor-countries-page">
 	<ThemeProvider>
 		<BrowserRouter>
 			<Routes>
-					<Route path="/" element={<Layout />}>
-						<Route index element={<Home />} />
-						<Route path="/countryDetail/:cca3" element={<CountryDetail />} />
-					</Route>
-				</Routes>
+				<Route path="/" element={<Layout />}>
+					<Route index element={<Home />} />
+					<Route path="/countryDetail/:cca3" element={<CountryDetail />} />
+				</Route>
+			</Routes>
 		</BrowserRouter>
 	</ThemeProvider>
   // </React.StrictMode>

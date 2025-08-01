@@ -5,8 +5,10 @@ function Layout() {
   return (
     <>
       <Header />
-      <main style={{ paddingTop: '100px' }}>
-        <Outlet />
+      <main style={{ paddingTop: '100px' }} className="flex flex-col justify-center items-center">
+        <div className="max-w-7xl w-full ">
+          <Outlet />
+        </div>
       </main>
     </>
   );
