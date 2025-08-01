@@ -11,7 +11,7 @@ const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
 		<ThemeProvider>
-			<BrowserRouter basename="/frontendmentor-countries-page">
+			<BrowserRouter basename="/frontendmentor-countries-page-color-theme-switcher">
 				<Routes>
 					<Route path="/" element={<Layout />}>
 						<Route index element={<Home />} />
