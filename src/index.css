@@ -42,7 +42,7 @@ body {
 	display: flex;
 	flex-direction: column;
 	min-height: 100vh;
-	height: 100vh
+	height: 100%;
 }
 
 /* Dark mode */
@@ -74,12 +74,24 @@ input, select, p {
   font-family: var(--font-family);
 }
 
+
 .dark-mode input, 
-.dark-mode select, 
-.dark-mode p,
-.dark-mode div, 
-.dark-mode h1 {
+.dark-mode select {
   background: var(--color-blue-900);
+  color: var(--color-white);
+}
+
+.dark-mode h1,
+.dark-mode p,
+.dark-mode span,
+.dark-mode main,
+.dark-mode div {
+  background: var(--color-blue-950);
+  color: var(--color-white);
+}
+
+#root > .dark-mode {
+  background: var(--color-blue-950);
   color: var(--color-white);
 }
 

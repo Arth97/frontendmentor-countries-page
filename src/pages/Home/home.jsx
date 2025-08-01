@@ -92,10 +92,3 @@ function Home() {
 }
 
 export default Home;
-
-/**
- * TODO: 
- * Click through to the border countries on the detail page
- * RESPONSIVE
- * Sacar nombre correcto de los borders
- */
