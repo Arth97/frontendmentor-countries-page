@@ -4,8 +4,8 @@ This is a solution to the [Contact form challenge on Frontend Mentor](https://ww
 
 ### Links
 
-- Solution URL: [Contact Form Code](https://github.com/Arth97/frontendmentor-countries-page)
-- Live Site URL: [FrontendmentorContactForm.io](https://arth97.github.io/frontendmentor-countries-page/)
+- Solution URL: [Contact Form Code](https://github.com/Arth97/frontendmentor-countries-page-color-theme-switcher)
+- Live Site URL: [FrontendmentorContactForm.io](https://arth97.github.io/frontendmentor-countries-page-color-theme-switcher)
 
 ### Built with
 
