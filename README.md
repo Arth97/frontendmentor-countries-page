@@ -4,8 +4,8 @@ This is a solution to the [Rest Countries API with color theme switcher challeng
 
 ### Links
 
-- Solution URL: [Contact Form Code](https://github.com/Arth97/frontendmentor-countries-page-color-theme-switcher)
-- Live Site URL: [FrontendmentorContactForm.io](https://arth97.github.io/frontendmentor-countries-page-color-theme-switcher)
+- Solution URL: [Countries page Code](https://github.com/Arth97/frontendmentor-countries-page-color-theme-switcher)
+- Live Site URL: [FrontendmentorCountriesPage.io](https://arth97.github.io/frontendmentor-countries-page-color-theme-switcher)
 
 ### Built with
 
